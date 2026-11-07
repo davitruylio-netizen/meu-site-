@@ -1,12 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXORA</title>
+  <meta name="description" content="NEXORA: inteligência artificial para diagnóstico e evolução empresarial.">
+  <title>NEXORA | Sua empresa. Novas possibilidades.</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>NEXORA</h1>
-  <p>Sua empresa. Novas possibilidades.</p>
+
+<header>
+  <div class="container navbar">
+    <a href="#" class="logo">NEX<span>ORA</span></a>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#analisar">Diagnóstico</a>
+    </nav>
+
+    <a href="#analisar" class="btn">Começar agora</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container">
+      <span class="tag">INTELIGÊNCIA PARA NEGÓCIOS</span>
+
+      <h1>
+        Sua empresa.<br>
+        <span>Novas possibilidades.</span>
+      </h1>
+
+      <p>
+        Transforme desafios em oportunidades.
+        Utilize inteligência artificial para analisar seu negócio,
+        descobrir possibilidades e construir planos de crescimento.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#analisar" class="btn">Analisar minha empresa</a>
+        <a href="#solucoes" class="btn btn-secondary">Conhecer a NEXORA</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="solucoes">
+    <div class="container">
+      <div class="section-title">
+        <h2>Inteligência aplicada ao seu negócio</h2>
+        <p>Uma nova maneira de enxergar sua empresa.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">⌕</div>
+          <h3>Diagnóstico empresarial</h3>
+          <p>Identifique desafios, oportunidades e pontos que merecem atenção.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">↗</div>
+          <h3>Estratégia e crescimento</h3>
+          <p>Descubra caminhos para melhorar resultados e desenvolver seu negócio.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">✦</div>
+          <h3>Plano de ação inteligente</h3>
+          <p>Transforme recomendações em iniciativas organizadas por prioridade.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="analyzer" id="analisar">
+    <div class="container">
+      <div class="section-title">
+        <h2>Conheça o potencial da sua empresa</h2>
+        <p>Preencha as informações para iniciar seu diagnóstico.</p>
+      </div>
+
+      <div class="panel">
+        <form id="analysisForm">
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="companyName">Nome da empresa *</label>
+              <input id="companyName" name="companyName" required
+                maxlength="120" placeholder="Ex.: Minha Empresa">
+            </div>
+
+            <div class="field">
+              <label for="sector">Segmento de atuação *</label>
+              <input id="sector" name="sector" required
+                maxlength="120" placeholder="Ex.: Varejo, tecnologia, serviços">
+            </div>
+
+            <div class="field">
+              <label for="location">Cidade e país</label>
+              <input id="location" name="location"
+                maxlength="150" placeholder="Ex.: São Paulo, Brasil">
+            </div>
+
+            <div class="field">
+              <label for="website">Site da empresa</label>
+              <input id="website" name="website"
+                maxlength="300" type="url" placeholder="https://suaempresa.com.br">
+            </div>
+
+            <div class="field full">
+              <label for="objective">Qual é o principal objetivo? *</label>
+              <textarea id="objective" name="objective" required
+                maxlength="1000" placeholder="Conte o que sua empresa deseja alcançar..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="audience">Quem é seu público-alvo?</label>
+              <textarea id="audience" name="audience"
+                maxlength="500" placeholder="Descreva seus clientes..."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="challenge">Qual é o maior desafio atualmente? *</label>
+              <textarea id="challenge" name="challenge" required
+                maxlength="1500" placeholder="Descreva os principais problemas ou dificuldades..."></textarea>
+            </div>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="researchConsent">
+            <span>Autorizo a pesquisa de informações públicas sobre minha empresa na internet, quando disponível.</span>
+          </label>
+
+          <button type="submit" id="submitButton" class="btn form-submit">
+            Gerar diagnóstico empresarial
+          </button>
+        </form>
+
+        <div class="result" id="result" aria-live="polite">
+          <h3>Seu diagnóstico NEXORA</h3>
+          <div class="result-content" id="resultContent"></div>
+          <button type="button" class="btn" id="printReport">
+            Imprimir / Salvar PDF
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>NEXORA © 2026 — Sua empresa. Novas possibilidades.</p>
+    <p>Relatórios automatizados são recomendações e devem ser avaliados antes de decisões empresariais.</p>
+  </div>
+</footer>
+
+<script src="/app.js" defer></script>
 </body>
 </html>
