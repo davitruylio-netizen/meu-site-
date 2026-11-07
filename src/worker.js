@@ -290,11 +290,7 @@ Se não houver dados suficientes, deixe isso claro.
         }, 502);
       }
     }
-
-    return new Response("NEXORA — Sua empresa. Novas possibilidades.", {
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8"
-      }
-    });
+return env.ASSETS.fetch(request);
+    
   }
 };
